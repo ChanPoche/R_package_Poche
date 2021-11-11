@@ -1,0 +1,51 @@
+---
+title: "PROJECT 2"
+output: html_document
+---
+
+``` {r}
+Butterfly<-read_csv("/cloud/project/data/Butterfly_data.csv")
+Butterfly
+```
+
+```{r}
+Phenology<-read_csv("/cloud/project/data/Phenology_data.csv")
+Phenology
+```
+```{r}
+Butterfly %>% 
+  select(ButterflySpecies) %>% 
+  unique()
+```
+#1. The data set has a total of 12 unique species.
+
+#2
+``` {r}
+ggplot(Phenology, mapping=aes(x=Year, y=AnnualTemp))+ geom_point()+geom_smooth(method="lm", color="pink", size=1) 
+
+```
+#3
+```{r}
+ggplot(Phenology, mapping=aes(x=Year, y=AnnualTemp))+ geom_point()+ stat_smooth()
+```
+#4
+  
+```{r}
+ggplot(Butterfly, mapping=aes(x=Day, y=SpringTemp)) + geom_point()+ geom_smooth()
+
+```
+
+```{r}
+ggplot(Butterfly, mapping=aes(x=Day, y=SummerTemp)) + geom_point()+ geom_smooth()
+
+```
+```{r}
+ggplot(Butterfly, mapping=aes(x=Day, y=Year)) + geom_point()+ geom_smooth()
+
+```
+I think Summer temp vs day of emergence will give us the best predictor. The reason being is that the points are the most linear.
+
+#5 No. It looks like the days on which the butterflies hatch are scattered throughout random temperatures.  
+
+
+
