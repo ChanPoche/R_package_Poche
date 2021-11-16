@@ -1,0 +1,10 @@
+Package: Poche Project 3
+Title: Functions for the project.
+Version: 0.0.0.9000
+Authors@R: 
+    person("Chandler", "Poche", , "chandler.poche-2@selu.edum", role = c("aut", "cre"))
+Description: The functions in this package will ..., ..., ....
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
